@@ -15,7 +15,6 @@
         <van-field v-model="number" type="number" label="数字" />
         <!-- 输入密码 -->
         <van-field v-model="password" type="password" label="密码" />
-        <div>aaassssss</div>
     </div>
 </template>
 
