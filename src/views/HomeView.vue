@@ -26,5 +26,14 @@ export default {
         [Button.name]: Button,
         [Field.name]: Field,
     },
+    data() {
+        return {
+            text: '',
+            tel: '',
+            digit: '',
+            number: '',
+            password: '',
+        }
+    },
 }
 </script>
