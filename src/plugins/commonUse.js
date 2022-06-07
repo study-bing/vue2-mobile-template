@@ -1,10 +1,4 @@
 import Vue from 'vue'
-<<<<<<< HEAD
-// 拷贝
-import VueClipboard from 'vue-clipboard2'
-Vue.use(VueClipboard)
-=======
->>>>>>> deef3a9 (feat: 添加插件)
 
 // 本地存储
 import Storage from 'vue-ls'
@@ -16,12 +10,9 @@ const options = {
 }
 
 Vue.use(Storage, options) //使用vue-ls插件
-<<<<<<< HEAD
-=======
 
 // 开发环境下面使用vConsole进行调试
 if (process.env.NODE_ENV === 'development') {
     const VConsole = require('vconsole')
     new VConsole()
 }
->>>>>>> deef3a9 (feat: 添加插件)

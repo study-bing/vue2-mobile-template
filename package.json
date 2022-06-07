@@ -1,5 +1,5 @@
 {
-  "name": "vue2-pc-template",
+  "name": "vue2-mobile-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,12 +11,8 @@
   "dependencies": {
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
-    "element-ui": "^2.15.9",
+    "vant": "^2.12.47",
     "vue": "^2.6.14",
-<<<<<<< HEAD
-    "vue-clipboard2": "^0.3.3",
-=======
->>>>>>> deef3a9 (feat: 添加插件)
     "vue-ls": "^4.2.0",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
@@ -31,7 +27,6 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "babel-plugin-component": "^1.1.1",
     "babel-plugin-import": "^1.13.5",
     "compression-webpack-plugin": "^3.0.0",
     "eslint": "^7.32.0",
@@ -42,6 +37,7 @@
     "less": "^4.0.0",
     "less-loader": "^8.0.0",
     "lint-staged": "^11.1.2",
+    "postcss-px-to-viewport": "^1.1.1",
     "prettier": "^2.4.1",
     "svg-sprite-loader": "^6.0.11",
     "terser-webpack-plugin": "^4.2.3",

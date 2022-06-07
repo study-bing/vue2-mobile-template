@@ -45,12 +45,6 @@ export default {
                 '-webkit-mask': `url(${this.iconClass}) no-repeat 50% 50%`,
             }
         },
-<<<<<<< HEAD
-        styleObject() {
-            return `width:${this.width}px;height:${this.height}px;`
-        },
-=======
->>>>>>> deef3a9 (feat: 添加插件)
     },
 }
 </script>

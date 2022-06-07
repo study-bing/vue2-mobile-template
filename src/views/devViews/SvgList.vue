@@ -1,29 +1,17 @@
 <!--
  * @Author: linbin
  * @Date: 2021-12-09 14:12:26
-<<<<<<< HEAD
- * @LastEditTime: 2022-06-06 18:04:00
- * @LastEditors: linBin
- * @Description: 显示所有svg
- * @FilePath: /vue2-pc-template/src/views/devViews/SvgList.vue
-=======
  * @LastEditTime: 2022-06-07 10:23:31
  * @LastEditors: linBin
  * @Description: 显示所有svg
  * @FilePath: /vue2-mobile-template/src/views/devViews/SvgList.vue
->>>>>>> deef3a9 (feat: 添加插件)
 -->
 <template>
     <div class="content">
         <h1 class="m-top-20 m-bottom-20">全局的svg</h1>
         <ul class="icon-list">
-<<<<<<< HEAD
-            <li v-for="svg in svgList" :key="svg" @click="copyLink(svg)">
-                <svg-icon :icon-class="svg" width="30" height="30" />
-=======
             <li v-for="svg in svgList" :key="svg">
                 <svg-icon :icon-class="svg" className="svg-size" readOnly />
->>>>>>> deef3a9 (feat: 添加插件)
                 <span class="icon-name">{{ svg }}</span>
             </li>
         </ul>
@@ -46,21 +34,6 @@ export default {
                 return content.match(reg)[1]
             })
         },
-<<<<<<< HEAD
-        copyLink(content) {
-            let _this = this
-            content = `<svg-icon icon-class="${content}" width="22" height="22" />`
-            _this.$copyText(content).then(
-                () => {
-                    _this.$message.success('复制成功')
-                },
-                () => {
-                    _this.$message.error('复制失败')
-                }
-            )
-        },
-=======
->>>>>>> deef3a9 (feat: 添加插件)
     },
     created() {
         const urls = require.context('@/assets/icons/svg', true, /\.svg$/)
@@ -98,11 +71,8 @@ export default {
     margin-top: 20px;
     cursor: pointer;
 }
-<<<<<<< HEAD
-=======
 .svg-size {
     width: 30px;
     height: 30px;
 }
->>>>>>> deef3a9 (feat: 添加插件)
 </style>
