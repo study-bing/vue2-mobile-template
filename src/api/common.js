@@ -4,6 +4,6 @@ export function getInitApi(data = {}) {
     return service({
         url: '/app/init',
         method: 'get',
-        params: data
+        params: data,
     })
 }

@@ -2,15 +2,12 @@ const { defineConfig } = require('@vue/cli-service')
 const TerserPlugin = require('terser-webpack-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const path = require('path')
+function resolve(dir) {
+    return path.join(__dirname, dir) //path.join(_dirname)设置绝对路径
+}
 module.exports = defineConfig({
     transpileDependencies: true,
     configureWebpack: (config) => {
-        config.resolve.alias = {
-            '@api': path.resolve('./src/api/'),
-            '@views': path.resolve('./src/views/'),
-            '@modules': path.resolve('./src/modules/'),
-            '@components': path.resolve('./src/components/'),
-        }
         if (process.env.NODE_ENV === 'production') {
             config.plugins.push(
                 new TerserPlugin({
@@ -35,6 +32,27 @@ module.exports = defineConfig({
                 })
             )
         }
+    },
+    //压缩图片
+    chainWebpack: (config) => {
+        config.module.rule('svg').exclude.add(path.resolve('./src/assets/icons/svg')).end()
+        config.module
+            .rule('assets')
+            .test(/\.svg$/)
+            .include.add(path.resolve('./src/assets/icons/svg'))
+            .end()
+            .use('svg-sprite-loader')
+            .loader('svg-sprite-loader')
+            .options({
+                symbolId: 'icon-[name]',
+            })
+            .end()
+        config.resolve.alias
+            //第一个参数：别名 第二个参数：路径
+            .set('@components', resolve('src/components'))
+            .set('@api', resolve('src/api'))
+            .set('@views', resolve('src/views'))
+            .set('@modules', resolve('src/modules'))
     },
     devServer: {
         historyApiFallback: true,
