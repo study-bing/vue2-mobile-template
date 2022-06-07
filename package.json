@@ -13,7 +13,10 @@
     "core-js": "^3.8.3",
     "element-ui": "^2.15.9",
     "vue": "^2.6.14",
+<<<<<<< HEAD
     "vue-clipboard2": "^0.3.3",
+=======
+>>>>>>> deef3a9 (feat: 添加插件)
     "vue-ls": "^4.2.0",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"

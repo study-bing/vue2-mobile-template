@@ -57,7 +57,7 @@ module.exports = defineConfig({
     devServer: {
         historyApiFallback: true,
         allowedHosts: 'all',
-        port: 8887,
+        port: 6677,
         proxy: {
             '^/web/': {
                 target: 'http://121.40.139.139:108',

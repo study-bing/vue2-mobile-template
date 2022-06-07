@@ -1,6 +1,6 @@
 <template>
     <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-on="$listeners" title="" />
-    <svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners" :style="styleObject" title="">
+    <svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners" title="">
         <use :href="iconName" />
     </svg>
 </template>
@@ -16,14 +16,6 @@ export default {
         className: {
             type: [String, Array, Object],
             default: '',
-        },
-        width: {
-            type: [Number, String],
-            default: 22,
-        },
-        height: {
-            type: [Number, String],
-            default: 22,
         },
         readOnly: {
             type: Boolean,
@@ -53,9 +45,12 @@ export default {
                 '-webkit-mask': `url(${this.iconClass}) no-repeat 50% 50%`,
             }
         },
+<<<<<<< HEAD
         styleObject() {
             return `width:${this.width}px;height:${this.height}px;`
         },
+=======
+>>>>>>> deef3a9 (feat: 添加插件)
     },
 }
 </script>
