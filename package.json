@@ -39,9 +39,11 @@
     "lint-staged": "^11.1.2",
     "postcss-px-to-viewport": "^1.1.1",
     "prettier": "^2.4.1",
+    "style-resources-loader": "^1.5.0",
     "svg-sprite-loader": "^6.0.11",
     "terser-webpack-plugin": "^4.2.3",
     "vconsole": "^3.14.6",
+    "vue-cli-plugin-style-resources-loader": "^0.1.5",
     "vue-template-compiler": "^2.6.14"
   }
 }

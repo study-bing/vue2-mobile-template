@@ -1,0 +1,45 @@
+/* 全局变量 */
+// 字体
+@color-text: #505050;
+@color-text-primary: #386ce2;
+// 边框
+@border-color: #eeeeee;
+
+.border-top(@color: @border-color) {
+    border-top: 1px solid @color;
+}
+
+@size-xs: 8px;
+@size-sm: 12px;
+@size-md: 16px;
+@size-lg: 20px;
+@size-xl: 24px;
+// 间距
+.margin-left-xs{
+    margin-left: @size-xs;
+}
+.margin-left-sm{
+    margin-left: @size-sm;
+}
+.margin-left-md{
+    margin-left: @size-md;
+}
+.margin-left-lg{
+    margin-left: @size-lg;
+}
+.margin-left-xl{
+    margin-left: @size-xl;
+}
+
+// 图片
+.bis(@url) { 
+	background-image: url(@url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+// 宽高
+.wh(@width, @height){
+	width: @width;
+	height: @height;
+}
